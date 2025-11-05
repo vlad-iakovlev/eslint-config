@@ -55,6 +55,6 @@ jobs:
       - name: Build
         run: npm run build
       - name: Release
-        run: npx semantic-release@25 --branches main
+        run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
