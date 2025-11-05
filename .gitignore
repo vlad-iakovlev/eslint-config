@@ -4,8 +4,5 @@
 # misc
 .DS_Store
 
-# vitest
-/coverage
-
 # build
 /dist
