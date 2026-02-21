@@ -30,7 +30,7 @@
     "@trivago/prettier-plugin-sort-imports": "^6.0.2",
     "@types/eslint-plugin-jsx-a11y": "^6.10.1",
     "@types/node": "^22.19.11",
-    "eslint": "^9.39.3",
+    "eslint": "^10.0.1",
     "grammy": "^1.40.0",
     "jiti": "^2.6.1",
     "lefthook": "^2.1.1",
