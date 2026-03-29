@@ -7,7 +7,11 @@ import reactHooksPlugin from 'eslint-plugin-react-hooks'
 import { defineConfig } from 'eslint/config'
 import tseslint from 'typescript-eslint'
 
-const baseConfig = defineConfig(eslint.configs.recommended)
+const baseConfig = defineConfig(eslint.configs.recommended, {
+  rules: {
+    'arrow-body-style': ['error', 'as-needed'],
+  },
+})
 
 const typescriptConfig = defineConfig(
   tseslint.configs.strictTypeChecked,
@@ -24,9 +28,9 @@ const typescriptConfig = defineConfig(
           allowAsThisParameter: true,
         },
       ],
+      '@typescript-eslint/no-unnecessary-type-arguments': 'off',
       '@typescript-eslint/prefer-nullish-coalescing': 'off',
       '@typescript-eslint/restrict-template-expressions': 'off',
-      'arrow-body-style': ['error', 'as-needed'],
     },
   },
 )
