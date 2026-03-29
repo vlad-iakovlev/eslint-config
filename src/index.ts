@@ -7,14 +7,11 @@ import reactHooksPlugin from 'eslint-plugin-react-hooks'
 import { defineConfig } from 'eslint/config'
 import tseslint from 'typescript-eslint'
 
-const baseConfig = defineConfig(
-  eslint.configs.recommended,
-  {
-    rules: {
-      'arrow-body-style': ['error', 'as-needed'],
-    },
+const baseConfig = defineConfig(eslint.configs.recommended, {
+  rules: {
+    'arrow-body-style': ['error', 'as-needed'],
   },
-)
+})
 
 const typescriptConfig = defineConfig(
   tseslint.configs.strictTypeChecked,
