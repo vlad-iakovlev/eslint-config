@@ -39,7 +39,6 @@ const reactConfig = defineConfig(
   { ...reactPlugin.configs.flat.recommended },
   reactHooksPlugin.configs.flat.recommended,
   a11yConfig.flatConfigs.strict,
-  nextPlugin.configs.recommended,
   {
     settings: {
       react: {
@@ -62,6 +61,18 @@ const reactConfig = defineConfig(
 )
 
 export default {
-  next: defineConfig(baseConfig, reactConfig, typescriptConfig, prettierConfig),
   node: defineConfig(baseConfig, typescriptConfig, prettierConfig),
+  react: defineConfig(
+    baseConfig,
+    reactConfig,
+    typescriptConfig,
+    prettierConfig,
+  ),
+  next: defineConfig(
+    baseConfig,
+    reactConfig,
+    nextPlugin.configs.recommended,
+    typescriptConfig,
+    prettierConfig,
+  ),
 }
