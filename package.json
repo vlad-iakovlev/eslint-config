@@ -19,17 +19,17 @@
     "prettier:ci": "prettier --check '**/*.(ts|js|md|json)'"
   },
   "dependencies": {
-    "@next/eslint-plugin-next": "^16.2.6",
+    "@next/eslint-plugin-next": "^16.2.7",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^7.1.1",
-    "typescript-eslint": "^8.60.0"
+    "typescript-eslint": "^8.60.1"
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^6.0.2",
     "@types/eslint-plugin-jsx-a11y": "^6.10.1",
-    "@types/node": "^24.12.4",
+    "@types/node": "^24.13.1",
     "eslint": "^9.39.4",
     "grammy": "^1.43.0",
     "jiti": "^2.7.0",
