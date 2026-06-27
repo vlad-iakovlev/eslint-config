@@ -24,7 +24,7 @@
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^7.1.1",
-    "typescript-eslint": "^8.61.1"
+    "typescript-eslint": "^8.62.0"
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^6.0.2",
@@ -34,7 +34,7 @@
     "grammy": "^1.44.0",
     "jiti": "^2.7.0",
     "lefthook": "^2.1.9",
-    "prettier": "^3.8.4",
+    "prettier": "^3.8.5",
     "prettier-plugin-packagejson": "^3.0.2",
     "typescript": "^6.0.3"
   }
