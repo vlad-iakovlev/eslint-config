@@ -1,8 +1,8 @@
+import eslintReact from '@eslint-react/eslint-plugin'
 import eslint from '@eslint/js'
 import nextPlugin from '@next/eslint-plugin-next'
 import prettierConfig from 'eslint-config-prettier'
-import a11yConfig from 'eslint-plugin-jsx-a11y'
-import reactPlugin from 'eslint-plugin-react'
+import jsxA11yX from 'eslint-plugin-jsx-a11y-x'
 import reactHooksPlugin from 'eslint-plugin-react-hooks'
 import { defineConfig } from 'eslint/config'
 import tseslint from 'typescript-eslint'
@@ -36,25 +36,12 @@ const typescriptConfig = defineConfig(
 )
 
 const reactConfig = defineConfig(
-  { ...reactPlugin.configs.flat.recommended },
+  eslintReact.configs['recommended-typescript'],
   reactHooksPlugin.configs.flat.recommended,
-  a11yConfig.flatConfigs.strict,
+  jsxA11yX.configs.strict,
   {
-    settings: {
-      react: {
-        version: 'detect',
-      },
-    },
     rules: {
-      'jsx-a11y/alt-text': [
-        'error',
-        {
-          elements: ['img', 'object', 'area', 'input[type="image"]'],
-          img: ['Image'],
-        },
-      ],
-      'jsx-a11y/no-noninteractive-tabindex': 'off',
-      'react/react-in-jsx-scope': 'off',
+      'jsx-a11y-x/no-noninteractive-tabindex': 'off',
       'react-hooks/set-state-in-effect': 'off',
     },
   },
