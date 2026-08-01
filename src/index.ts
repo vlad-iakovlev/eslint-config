@@ -3,7 +3,6 @@ import eslint from '@eslint/js'
 import nextPlugin from '@next/eslint-plugin-next'
 import prettierConfig from 'eslint-config-prettier'
 import jsxA11yX from 'eslint-plugin-jsx-a11y-x'
-import reactHooksPlugin from 'eslint-plugin-react-hooks'
 import { defineConfig } from 'eslint/config'
 import tseslint from 'typescript-eslint'
 
@@ -37,12 +36,11 @@ const typescriptConfig = defineConfig(
 
 const reactConfig = defineConfig(
   eslintReact.configs['recommended-typescript'],
-  reactHooksPlugin.configs.flat.recommended,
   jsxA11yX.configs.strict,
   {
     rules: {
+      '@eslint-react/set-state-in-effect': 'off',
       'jsx-a11y-x/no-noninteractive-tabindex': 'off',
-      'react-hooks/set-state-in-effect': 'off',
     },
   },
 )
